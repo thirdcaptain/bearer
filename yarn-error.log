@@ -1,0 +1,69 @@
+Arguments: 
+  /usr/bin/node /usr/share/yarn/bin/yarn.js install
+
+PATH: 
+  /home/vagrant/bin:/home/vagrant/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+
+Yarn version: 
+  1.9.4
+
+Node version: 
+  8.12.0
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: getaddrinfo EAI_AGAIN registry.npmjs.org:443
+      at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:67:26)
+
+npm manifest: 
+  {
+    "name": "hello-world",
+    "version": "0.0.1",
+    "description": "HelloWorld",
+    "main": "dist/index.js",
+    "types": "dist/types/components.d.ts",
+    "module": "dist/esm/index.js",
+    "collection": "dist/collection/collection-manifest.json",
+    "scripts": {
+      "build": "stencil build",
+      "dev": "stencil build --dev --watch --serve",
+      "serve": "stencil-dev-server",
+      "start": "npm run dev",
+      "test": "jest --no-cache",
+      "test.watch": "jest --watch --no-cache"
+    },
+    "dependencies": {
+      "@bearer/core": "latest",
+      "@bearer/intents": "latest",
+      "@bearer/ui": "latest",
+      "axios": "^0.18.0"
+    },
+    "devDependencies": {
+      "@bearer/cli": "latest",
+      "@types/jest": "latest",
+      "@types/node": "latest",
+      "jest": "latest"
+    },
+    "license": "MIT",
+    "jest": {
+      "transform": {
+        "^.+\\.(ts|tsx)$": "<rootDir>/node_modules/@stencil/core/testing/jest.preprocessor.js"
+      },
+      "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(tsx?|jsx?)$",
+      "moduleFileExtensions": [
+        "ts",
+        "tsx",
+        "js",
+        "json",
+        "jsx"
+      ]
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
